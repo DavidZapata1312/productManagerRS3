@@ -1,0 +1,12 @@
+[
+    {
+        "name": "cereal",
+        "price": 3000.0,
+        "quantity": 20
+    },
+    {
+        "name": "arroz",
+        "price": 2000.0,
+        "quantity": 3
+    }
+]
