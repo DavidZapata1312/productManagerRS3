@@ -63,6 +63,10 @@ def change_quantity(name, new_quantity):
 
     print(f"No product found with the name '{name}'.")
 
+def total_inventory():
+    data = load_data()
+    return sum(map(lambda producto: producto.get("quantity", 0) * producto.get("price", 0), data))
+
 if __name__ == "__main__":
     initialize_file()
 
@@ -71,8 +75,10 @@ if __name__ == "__main__":
         print("1. Add new product")
         print("2. Change product price")
         print("3. Change product quantity")
-        print("4. Exit")
-        option = input("Select an option (1/2/3/4): ").strip()
+        print("4. Check")
+        print("5. Exit")
+
+        option = input("Select an option (1/2/3/4/5): ").strip()
 
         if option == "1":
             print("\n--- Add new product ---")
@@ -129,8 +135,12 @@ if __name__ == "__main__":
             change_quantity(name, new_quantity)
 
         elif option == "4":
+            total=total_inventory()
+            print(f"total inventory value: {total}")
+            
+
+        elif option == "5":
             print("Goodbye! Inventory updated.")
             break
-
         else:
             print("Invalid option. Try again.")

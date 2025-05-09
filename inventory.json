@@ -8,5 +8,20 @@
         "name": "arroz",
         "price": 2000.0,
         "quantity": 3
+    },
+    {
+        "name": "papa",
+        "price": 4000.0,
+        "quantity": 5
+    },
+    {
+        "name": "yuca",
+        "price": 2000.0,
+        "quantity": 7
+    },
+    {
+        "name": "leche",
+        "price": 4500.0,
+        "quantity": 10
     }
 ]
